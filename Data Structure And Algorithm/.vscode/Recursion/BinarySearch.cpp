@@ -1,25 +1,29 @@
 #include <iostream>
 using namespace std;
 
-void print(int arr[], int s, int e) {
-  for(int i = 0; i <= e; i++) {
+void print(int arr[], int s, int e)
+{
+  for (int i = 0; i <= e; i++)
+  {
     cout << arr[i] << " ";
-  } cout << endl;
+  }
+  cout << endl;
 }
 
 bool binarySearch(int *arr, int s, int e, int k)
-{  cout << endl;
-   print(arr, s, e);
+{
+  cout << endl;
+  print(arr, s, e);
   // base case
   // element not found
   if (s > e)
   {
     return false;
   }
-  
+
   int mid = s + (e - s) / 2;
 
-  //element found
+  // element found
   if (arr[mid] == k)
   {
     return true;
@@ -43,7 +47,7 @@ int main()
   int size = 9;
   int key = 20;
 
-  cout << "Present or not " <<  binarySearch(arr, 0, 8, key) << endl;
+  cout << "Present or not " << binarySearch(arr, 0, 8, key) << endl;
 
   return 0;
 }
